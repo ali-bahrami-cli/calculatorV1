@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     TextView result;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
-    editor = preferences.edit();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
 
         preferences = getApplicationContext().getSharedPreferences("calcPrefs", Context.MODE_PRIVATE);
+        editor = preferences.edit();
 
         String lastResult = preferences.getString("result", "no data");
         result.setText(" the last result : \n " + lastResult);
