@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView result;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
+    editor = preferences.edit();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
